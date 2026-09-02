@@ -60,7 +60,7 @@ export default function Home() {
     formData.append("is_url", String(isUrl));
 
     try {
-      const response = await fetch("http://localhost:8000/analyze", {
+      const response = await fetch("https://cv-job-agent.onrender.com/analyze", {
         method: "POST",
         body: formData,
       });
