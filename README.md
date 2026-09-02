@@ -9,22 +9,23 @@ An agentic AI system that analyzes a candidate's CV against any job description 
 
 ## Architecture
 
-CV (PDF) + Job Description
-↓
-FastAPI Backend
-↓
-LangGraph Orchestrator
-↓
-┌─────────────────────────────────┐
-│ Agent 1 → CV Parser │
-│ Agent 2 → Job Analyzer │
-│ Agent 3 → Gap Analyzer │
-│ Agent 4 → Recommender │
-└─────────────────────────────────┘
-↓
-Supabase (observability logs)
-↓
-Next.js Frontend (Vercel)
+```
+User → Next.js Frontend (Vercel)
+          ↓
+   FastAPI Backend (Render)
+          ↓
+   LangGraph Orchestrator
+          ↓
+   Agent 1: CV Parser
+          ↓
+   Agent 2: Job Analyzer
+          ↓
+   Agent 3: Gap Analyzer
+          ↓
+   Agent 4: Recommender
+          ↓
+   Supabase (logs + results)
+```
 
 
 ## Tech Stack
