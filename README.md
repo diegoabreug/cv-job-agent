@@ -104,6 +104,6 @@ npm run dev
 
 ## Author
 
-Diego Enrique Abreu Garcia  
-Software Engineer | U.S. Permanent Resident  
+Diego Abreu  
+Software Engineer 
 [LinkedIn](https://linkedin.com/in/diegoabreug) · [GitHub](https://github.com/diegoabreug)
