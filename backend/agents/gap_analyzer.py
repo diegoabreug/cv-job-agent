@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 llm = ChatGroq(
-    model="openai/gpt-oss-20b",
+    model="llama-3.1-8b-instant",
     temperature=0,
 )
 
