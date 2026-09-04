@@ -9,7 +9,7 @@ load_dotenv()
 
 # Why Groq: free tier, fast inference, Llama 3.1 70B is strong
 # for structured extraction tasks
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0)
 
 def parse_cv(cv_text: str) -> dict:
     """

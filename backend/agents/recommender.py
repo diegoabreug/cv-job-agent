@@ -10,7 +10,7 @@ load_dotenv()
 # temperature=0.3 here (not 0) because recommendations
 # benefit from slight creativity — we want varied, specific
 # suggestions. Not too high or outputs become unreliable.
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.3)
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.3)
 
 def generate_recommendations(cv_data: dict, job_data: dict,
                               gap_data: dict) -> dict:
