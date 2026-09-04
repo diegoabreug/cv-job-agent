@@ -1,7 +1,7 @@
 import os
 import json
 import time
-from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, SystemMessage
 from dotenv import load_dotenv
 
@@ -9,10 +9,7 @@ load_dotenv()
 
 # Why Groq: free tier, fast inference, Llama 3.1 70B is strong
 # for structured extraction tasks
-llm = ChatGroq(
-    model="llama-3.1-8b-instant",
-    temperature=0,  # 0 = deterministic, important for structured extraction
-)
+llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
 
 def parse_cv(cv_text: str) -> dict:
     """
