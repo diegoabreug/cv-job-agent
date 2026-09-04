@@ -246,7 +246,7 @@ export default function Home() {
                   <p>{result.cv_profile.education}</p>
                   <p>{result.cv_profile.experience_years} years experience</p>
                   <p className="text-xs mt-2 font-mono text-gray-400">
-                    ID: {result.analysis_id.slice(0, 8)}...
+                    ID: {result.analysis_id}
                   </p>
                 </div>
               </div>
