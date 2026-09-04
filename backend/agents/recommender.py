@@ -1,7 +1,7 @@
 import os
 import json
 import time
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 from dotenv import load_dotenv
 
@@ -10,7 +10,7 @@ load_dotenv()
 # temperature=0.3 here (not 0) because recommendations
 # benefit from slight creativity — we want varied, specific
 # suggestions. Not too high or outputs become unreliable.
-llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", temperature=0.3)
+llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0.3)
 
 def generate_recommendations(cv_data: dict, job_data: dict,
                               gap_data: dict) -> dict:

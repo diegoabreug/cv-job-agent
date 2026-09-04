@@ -2,14 +2,14 @@ import os
 import json
 import time
 import httpx
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", temperature=0)
+llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
 
 def fetch_job_from_url(url: str) -> str:
     """

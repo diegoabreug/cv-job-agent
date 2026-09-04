@@ -1,13 +1,13 @@
 import os
 import json
 import time
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", temperature=0)
+llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
 
 def analyze_gaps(cv_data: dict, job_data: dict) -> dict:
     """
